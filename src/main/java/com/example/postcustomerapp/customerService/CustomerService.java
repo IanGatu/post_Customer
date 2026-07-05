@@ -3,6 +3,7 @@ import org.springframework.stereotype.Service;
 
 import com.example.postcustomerapp.customer.Customer;
 import com.example.postcustomerapp.customerRepository.CustomerRepository;
+import com.example.postcustomerapp.customernotfoundException.CustomerNotFoundException;
 
 @Service
 public class CustomerService {
@@ -15,12 +16,11 @@ public class CustomerService {
 
     //method to create customer
     public Customer createCustomer( Customer customer){
-        if (customer!=null){
-            return repository.saveCustomer(customer);
+        if (customer==null){
+            throw new CustomerNotFoundException("customer cannot be null");
         }
         else{
-            System.out.println("object cannot be null");
-            return null;
+            return repository.saveCustomer(customer);
         }
 
     }
