@@ -1,4 +1,4 @@
-package com.example.postcustomerapp.Apierrorconstructor;
+package com.example.postcustomerapp.ApiErorConstructor;
 
 public class ApiError {
     //private int status;
