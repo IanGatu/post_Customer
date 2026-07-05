@@ -5,8 +5,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
+import com.example.postcustomerapp.ApiErorConstructor.ApiError;
 import com.example.postcustomerapp.customernotfoundException.CustomerNotFoundException;
-import com.example.postcustomerapp.exception.ApiError;
 
 
 
